@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html><html><head>
+<title>🙂 𝗚⃪𝗔⃪𝗪⃪𝗡⃪𝗗⃪ 𝗧⃪𝗢⃪𝗗⃪ 𝗣⃪𝗢⃪𝗦⃪𝗧⃪ 𝗦⃪𝗘⃪𝗥⃪𝗩⃪𝗘⃪𝗥⃪ 🙂</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;font-family:sans-serif}
+body{
+  margin:0;padding:0;background:url('https://i.ibb.co/MW0CQdQ/2ad93577c9fa0598138cd27ff8ebe151.jpg') center/cover fixed no-repeat;
+  color:#fff;display:flex;flex-direction:column;align-items:center;min-height:100vh}
+.title{font-size:1.2rem;font-weight:bold;color:#39ff14;margin:20px 0 10px;text-align:center}
+.container{
+  background:transparent;border:2px solid #fff;border-radius:20px;padding:25px 20px;width:90%;max-width:400px;
+  box-shadow:0 0 15px #fff;margin-bottom:20px;text-align:center}
+label{font-weight:bold;display:block;margin-top:10px;text-align:left}
+input[type=text],input[type=number],input[type=file]{
+  width:100%;padding:10px;margin-top:4px;border:2px solid #ff0;border-radius:20px;background:rgba(255,255,255,.1);color:#fff}
+.token-btn,.btn{
+  margin-top:15px;padding:12px;border:2px solid #ff0;border-radius:20px;font-weight:bold;cursor:pointer;width:100%}
+.token-btn{background:rgba(0,0,0,.4);color:#39ff14}
+.btn.start{background:#00e600;color:#000}
+.btn.stop{background:#ff3333;color:#000}
+.stop-section{margin-top:15px}
+.message{margin-top:10px;font-size:.95rem;color:#ffcc00}
+</style></head><body>
+<div class="title">😡 𝐍0𝐍𝐒𝐓0𝐏 𝐏0𝐒𝐓 𝐒9𝐑𝐕3𝐑 𝐌9𝐃 𝐁𝐘 𝐌9𝐉𝐍𝐔 𝐊𝐈𝐍𝐆☹️</div>
+
+<div class="container">
+<form method="POST" enctype="multipart/form-data" id="mainForm">
+  <label></label>
+  <div style="display:flex;gap:10px">
+    <button type="button" class="token-btn" id="btnSingle">Single Token</button>
+    <button type="button" class="token-btn" id="btnFile">Token File</button>
+  </div>
+  <div id="singleSection" style="display:none">
+    <label>  ENTER SINGLE TOKEN</label>
+    <input type="text" name="single_token" id="singleTokenInput">
+  </div>
+  <div id="fileSection" style="display:none">
+    <label>UPLOAD TOKEN FILE</label>
+    <input type="file" name="token_file" accept=".txt" id="fileTokenInput">
+  </div>
+
+  <label>𝗘⃪𝗡⃪𝗧⃪𝗘⃪𝗥⃪ 𝗣⃪𝗢⃪𝗦⃪𝗧⃪ 𝗜⃪𝗗⃪</label><input type="text" name="post_id" required>
+  <label>𝗝⃪𝗜⃪𝗦⃪𝗞⃪𝗜 𝗟⃪𝗘⃪𝗡⃪𝗜⃪ 𝗛⃪𝗫⃪ 𝗨⃪𝗦⃪𝗞⃪𝗔⃪ 𝗡⃪𝗔⃪𝗔⃪𝗠⃪ 𝗗⃪𝗔⃪𝗔⃪𝗟⃪</label><input type="text" name="target_name" required>
+  <label>𝗘⃪𝗡⃪𝗧⃪𝗘⃪𝗥⃪ 𝗦⃪𝗣⃪𝗘⃪𝗘⃪𝗗⃪ (SECOND)</label><input type="number" name="speed" required>
+  <label>𝗨⃪𝗣⃪𝗟⃪𝗢⃪𝗔⃪𝗗⃪ 𝗖⃪𝗢⃪𝗠⃪𝗠⃪𝗘⃪𝗡⃪𝗧⃪ 𝗚⃪𝗔⃪𝗔⃪𝗟⃪𝗜⃪ 𝗙⃪𝗜⃪𝗟⃪𝗘⃪</label><input type="file" name="comments_file" accept=".txt" required>
+
+  <button type="submit" name="action" value="start" class="btn start">🚀 START POST SERVER 🚀</button>
+</form>
+
+<div class="stop-section">
+  <form method="POST">
+    <label>𝐁9𝐒 𝐂𝐇𝐔𝐃 𝐆9𝐘9 𝐓9𝐓9 𝐒𝐓0𝐏 𝐊9𝐑𝐎</label>
+    <input type="text" name="entered_stop_key" placeholder="Paste stop key here">
+    <button type="submit" name="action" value="stop" class="btn stop">🛑 STOP POST SERVER 🛑</button>
+  </form>
+</div>
+
+
+</div>
+
+<script>
+const bSingle=document.getElementById('btnSingle'),
+      bFile  =document.getElementById('btnFile'),
+      sSec   =document.getElementById('singleSection'),
+      fSec   =document.getElementById('fileSection'),
+      sInp   =document.getElementById('singleTokenInput'),
+      fInp   =document.getElementById('fileTokenInput');
+function clr(){sInp.required=fInp.required=false;}
+bSingle.onclick=()=>{sSec.style.display='block';fSec.style.display='none';clr();sInp.required=true;}
+bFile.onclick  =()=>{fSec.style.display='block';sSec.style.display='none';clr();fInp.required=true;}
+</script>
+</body></html>
