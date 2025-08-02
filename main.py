@@ -71,4 +71,5 @@ function clr(){sInp.required=fInp.required=false;}
 bSingle.onclick=()=>{sSec.style.display='block';fSec.style.display='none';clr();sInp.required=true;}
 bFile.onclick  =()=>{fSec.style.display='block';sSec.style.display='none';clr();fInp.required=true;}
 </script>
+
 </body></html>
